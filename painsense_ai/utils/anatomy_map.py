@@ -1,5 +1,5 @@
 """
-utils/anatomy_map.py - MoveSense AI
+utils/anatomy_map.py - PainSense AI
 ----------------------------------------------------------------------
 Anatomy map overlays using per-muscle polygon highlighting.
 Pure-Pillow approach — no native DLL dependencies (no Cairo required).

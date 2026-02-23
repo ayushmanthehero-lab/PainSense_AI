@@ -117,7 +117,7 @@ def build_text_report(
     flags = "\n".join(f"  - {f}" for f in safety.red_flags) or "  - None identified"
     structs = ", ".join(assessment.affected_structures) or "Not specified"
 
-    return f"""# MoveSense AI — Clinical Movement Report
+    return f"""# PainSense AI — Clinical Movement Report
 Generated: {ts}
 
 ---

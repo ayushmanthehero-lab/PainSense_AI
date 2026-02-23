@@ -1,4 +1,4 @@
-# MoveSense AI — requirements
+# PainSense AI — requirements
 # Tested versions (Python 3.12, CUDA 11.8, RTX/GTX GPU)
 #
 # Install PyTorch for your CUDA version first:

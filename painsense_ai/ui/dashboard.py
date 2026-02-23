@@ -1,7 +1,7 @@
 """
 ui/dashboard.py
 ────────────────
-Gradio-based MoveSense AI dashboard.
+Gradio-based PainSense AI dashboard.
 
 Workflow
 ────────
@@ -653,7 +653,7 @@ def build_ui() -> gr.Blocks:
         export_md_btn.click(fn=_export_md,   inputs=[], outputs=[export_file_out])
 
         gr.Markdown(
-            "> ⚠️ **Disclaimer:** MoveSense AI is a research/demonstration tool. "
+            "> ⚠️ **Disclaimer:** PainSense AI is a research/demonstration tool. "
             "It does not replace professional clinical diagnosis. Always consult a "
             "qualified healthcare provider for medical decisions."
         )

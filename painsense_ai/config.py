@@ -57,7 +57,7 @@ FEATURE_WEIGHTS = {
 }
 
 # ── Gradio UI ─────────────────────────────────────────────────────────────────
-UI_TITLE       = "MoveSense AI — Musculoskeletal Movement Assessment"
+UI_TITLE       = "PainSense AI — Musculoskeletal Movement Assessment"
 UI_DESCRIPTION = (
     "AI-assisted musculoskeletal movement assessment using MediaPipe biomechanical analysis "
     "and MedGemma clinical interpretation. Upload a short movement clip — the system scores "

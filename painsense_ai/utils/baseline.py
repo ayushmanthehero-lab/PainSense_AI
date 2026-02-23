@@ -1,7 +1,7 @@
 """
 utils/baseline.py
 ─────────────────
-Per-patient baseline comparison for MoveSense AI.
+Per-patient baseline comparison for PainSense AI.
 
 Workflow
 ────────
