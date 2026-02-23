@@ -1,0 +1,27 @@
+# MoveSense AI — requirements
+# Tested versions (Python 3.12, CUDA 11.8, RTX/GTX GPU)
+#
+# Install PyTorch for your CUDA version first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# Then install the rest:
+#   pip install -r requirements.txt
+
+# Core ML / Inference
+torch>=2.7.0
+torchvision>=0.22.0
+transformers>=5.0.0
+accelerate>=1.12.0
+bitsandbytes>=0.49.0          # 4-bit NF4 quantization
+
+# Computer Vision / Pose
+mediapipe>=0.10.9
+opencv-python>=4.9.0.80
+Pillow>=10.2.0
+numpy>=1.26.0
+
+# UI / Dashboard
+gradio>=6.0.0
+
+# Utilities
+scipy>=1.12.0                  # angle / signal processing
+matplotlib>=3.8.0              # charts & plots
