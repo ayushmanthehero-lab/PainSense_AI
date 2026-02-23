@@ -90,12 +90,12 @@ painsense_ai/
 The MAS is computed **entirely by deterministic biomechanical rules** -- MedGemma cannot
 override or re-score it. MedGemma only provides the clinical interpretation.
 
-| MAS Range | Label | Colour |
-|-----------|-------|--------|
-| 0 - 14 | Normal | Green |
-| 15 - 24 | Mild Restriction | Amber |
-| 25 - 49 | Moderate Restriction | Orange |
-| 50 - 100 | Severe Restriction | Red |
+| MAS Range | Label |
+|-----------|-------|
+| 0 - 14 | Normal |
+| 15 - 24 | Mild Restriction |
+| 25 - 49 | Moderate Restriction |
+| 50 - 100 | Severe Restriction |
 
 ---
 
@@ -176,7 +176,7 @@ Opens Gradio dashboard at http://localhost:7860.
 1. Upload or record a video (any format -- automatically transcoded to H.264 on upload)
 2. Optionally select the reported symptom region from the dropdown
 3. Click **Analyse Movement**
-4. Results populate across all 7 tabs in ~30-60 seconds
+4. Results populate across all 7 tabs in ~7-13 minutes
 
 ---
 
