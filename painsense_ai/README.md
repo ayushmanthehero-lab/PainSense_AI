@@ -10,7 +10,7 @@ and a personalised rehab plan -- all running fully offline on a consumer GPU.
 
 ## Pipeline
 
-
+```
 Video Upload / Camera Recording
         |
         v  ffmpeg H.264 transcode (universal browser compatibility)
@@ -33,7 +33,7 @@ Video Upload / Camera Recording
         |
         v  Gradio Dashboard (7 tabs) + JSON / Markdown export
 
-
+```
 ---
 
 ## Project Structure
