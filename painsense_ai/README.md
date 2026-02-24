@@ -40,33 +40,41 @@ Video Upload / Camera Recording
 
 `
 painsense_ai/
-+-- main.py                       # Entry point -- launches Gradio dashboard
-+-- config.py                     # All settings: model paths, ROM norms, MAS thresholds, UI
-+-- requirements.txt
-+-- pose_landmarker_full.task     # MediaPipe Full pose model (bundled)
-|
-+-- modules/
-|   +-- pose_estimator.py         # MediaPipe BlazePose wrapper + per-frame landmark extraction
-|   +-- feature_extractor.py      # ClinicalFeatureVector: joint angles, ROM deficit, asymmetry,
-|   |                             #   velocity reduction, guarding, head/trunk posture, face pain
-|   +-- movement_classifier.py    # Auto-detects active body region from feature vector
-|   +-- pain_scorer.py            # Deterministic MAS engine (rule-based, no LLM)
-|   +-- medgemma_engine.py        # MedGemma 4B-IT loader -- 4-bit NF4, lazy singleton
-|   +-- clinical_reasoning.py     # Region-locked prompts -> MedGemma -> ClinicalAssessment
-|   +-- safety_layer.py           # Red-flag detection + risk level (MedGemma)
-|   +-- documentation.py          # SOAP note + patient explanation + rehab plan (MedGemma)
-|
-+-- ui/
-|   +-- dashboard.py              # Gradio dashboard -- 7 tabs, H.264 transcode on upload
-|
-+-- utils/
-|   +-- visualization.py          # MAS gauge, ROM bar chart, signal radar chart
-|   +-- anatomy_map.py            # Anatomy overlay -- full-body highlight + muscle zoom view
-|   +-- baseline.py               # Per-patient baseline recording and deviation comparison
-|   +-- export.py                 # JSON and Markdown report builder
-|
-+-- assets/
-    +-- anatomy/                  # Gray anatomy reference images (7 regions)
+│
+├── main.py                      # Entry point – launches Gradio dashboard
+├── config.py                    # Global settings: model paths, ROM norms, MAS thresholds, UI configs
+├── requirements.txt
+├── pose_landmarker_full.task    # MediaPipe BlazePose Full model (bundled)
+│
+├── modules/
+│   ├── pose_estimator.py        # MediaPipe wrapper + per-frame landmark extraction
+│   ├── feature_extractor.py     # ClinicalFeatureVector:
+│   │                            #   - Joint angles
+│   │                            #   - ROM deficit
+│   │                            #   - Asymmetry
+│   │                            #   - Velocity reduction
+│   │                            #   - Guarding detection
+│   │                            #   - Head/trunk posture
+│   │                            #   - Facial pain indicators
+│   │
+│   ├── movement_classifier.py   # Auto-detect active body region
+│   ├── pain_scorer.py           # Deterministic MAS engine (rule-based)
+│   ├── medgemma_engine.py       # MedGemma 4B-IT loader (4-bit NF4, lazy singleton)
+│   ├── clinical_reasoning.py    # Region-locked prompts → MedGemma → ClinicalAssessment
+│   ├── safety_layer.py          # Red-flag detection + risk stratification
+│   └── documentation.py         # SOAP note + patient explanation + rehab plan
+│
+├── ui/
+│   └── dashboard.py             # Gradio dashboard (7 tabs, H.264 transcode on upload)
+│
+├── utils/
+│   ├── visualization.py         # MAS gauge, ROM bar chart, signal radar chart
+│   ├── anatomy_map.py           # Anatomy overlay – region highlight + muscle zoom
+│   ├── baseline.py              # Per-patient baseline recording + deviation comparison
+│   └── export.py                # JSON and Markdown report builder
+│
+└── assets/
+    └── anatomy/                 # Gray anatomical reference images (7 body regions)
 `
 
 ---
