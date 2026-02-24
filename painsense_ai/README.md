@@ -39,42 +39,36 @@ Video Upload / Camera Recording
 ## Project Structure
 
 
+```
 painsense_ai/
 │
-├── main.py                      # Entry point – launches Gradio dashboard
-├── config.py                    # Global settings: model paths, ROM norms, MAS thresholds, UI configs
+├── main.py
+├── config.py
 ├── requirements.txt
-├── pose_landmarker_full.task    # MediaPipe BlazePose Full model (bundled)
+├── pose_landmarker_full.task
 │
 ├── modules/
-│   ├── pose_estimator.py        # MediaPipe wrapper + per-frame landmark extraction
-│   ├── feature_extractor.py     # ClinicalFeatureVector:
-│   │                            #   - Joint angles
-│   │                            #   - ROM deficit
-│   │                            #   - Asymmetry
-│   │                            #   - Velocity reduction
-│   │                            #   - Guarding detection
-│   │                            #   - Head/trunk posture
-│   │                            #   - Facial pain indicators
-│   │
-│   ├── movement_classifier.py   # Auto-detect active body region
-│   ├── pain_scorer.py           # Deterministic MAS engine (rule-based)
-│   ├── medgemma_engine.py       # MedGemma 4B-IT loader (4-bit NF4, lazy singleton)
-│   ├── clinical_reasoning.py    # Region-locked prompts → MedGemma → ClinicalAssessment
-│   ├── safety_layer.py          # Red-flag detection + risk stratification
-│   └── documentation.py         # SOAP note + patient explanation + rehab plan
+│   ├── pose_estimator.py
+│   ├── feature_extractor.py
+│   ├── movement_classifier.py
+│   ├── pain_scorer.py
+│   ├── medgemma_engine.py
+│   ├── clinical_reasoning.py
+│   ├── safety_layer.py
+│   └── documentation.py
 │
 ├── ui/
-│   └── dashboard.py             # Gradio dashboard (7 tabs, H.264 transcode on upload)
+│   └── dashboard.py
 │
 ├── utils/
-│   ├── visualization.py         # MAS gauge, ROM bar chart, signal radar chart
-│   ├── anatomy_map.py           # Anatomy overlay – region highlight + muscle zoom
-│   ├── baseline.py              # Per-patient baseline recording + deviation comparison
-│   └── export.py                # JSON and Markdown report builder
+│   ├── visualization.py
+│   ├── anatomy_map.py
+│   ├── baseline.py
+│   └── export.py
 │
 └── assets/
-    └── anatomy/                 # Gray anatomical reference images (7 body regions)
+    └── anatomy/
+```
 
 
 ---
