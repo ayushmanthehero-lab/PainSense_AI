@@ -13,7 +13,7 @@ and a personalised rehab plan -- all running fully offline on a consumer GPU.
 
 ![PainSense AI Architecture](assets/Pipeline Architecture.jpg)
 <p align="center">
-  <img src="assets/pipeline_architecture.jpg" width="850">
+  <img src="assets/Pipeline Architecture.jpg" width="850">
 </p>
 
 ---
