@@ -11,27 +11,7 @@ and a personalised rehab plan -- all running fully offline on a consumer GPU.
 ## Pipeline
 
 ```
-Video Upload / Camera Recording
-        |
-        v  ffmpeg H.264 transcode (universal browser compatibility)
-        |
-        v  MediaPipe BlazePose Full -- 33-landmark pose estimation
-        |
-        v  Feature Extractor -- joint angles, ROM, asymmetry, velocity, guarding, face pain
-        |
-        v  Movement Region Classifier -- auto-detects: shoulder / elbow / hip-knee / lumbar / cervical / full-body
-        |
-        v  MAS (Movement Abnormality Score) -- deterministic rule-based 0-100 score
-        |
-        +- MAS < 15  ->  Normal (no LLM call)
-        |
-        v  MedGemma 4B-IT (4-bit NF4) -- region-locked clinical reasoning
-        |   +-- Clinical reasoning and differential diagnoses
-        |   +-- Safety layer -- red-flag detection and risk level
-        |   +-- Anatomy map -- muscle-level explanation
-        |   +-- SOAP note + patient explanation + rehab plan
-        |
-        v  Gradio Dashboard (7 tabs) + JSON / Markdown export
+![PainSense AI Architecture](painsense_ai/assets/Pipeline Architecture.jpg)
 
 ```
 ---
