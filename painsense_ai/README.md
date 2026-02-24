@@ -161,7 +161,7 @@ Desktop/
     +-- painsense_ai/     <- this repo
 ```
 
-Model: google/medgemma-4b-it loaded at 4-bit NF4 quantisation via itsandbytes.
+Model: google/medgemma-4b-it loaded at 4-bit NF4 quantisation via bitsandbytes.
 The model path is configured in config.py -> MODEL_DIR.
 
 ---
