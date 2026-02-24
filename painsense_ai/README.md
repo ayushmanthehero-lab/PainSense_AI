@@ -10,7 +10,7 @@ and a personalised rehab plan -- all running fully offline on a consumer GPU.
 
 ## Pipeline
 
-`
+
 Video Upload / Camera Recording
         |
         v  ffmpeg H.264 transcode (universal browser compatibility)
@@ -32,13 +32,13 @@ Video Upload / Camera Recording
         |   +-- SOAP note + patient explanation + rehab plan
         |
         v  Gradio Dashboard (7 tabs) + JSON / Markdown export
-`
+
 
 ---
 
 ## Project Structure
 
-`
+
 painsense_ai/
 │
 ├── main.py                      # Entry point – launches Gradio dashboard
@@ -75,7 +75,7 @@ painsense_ai/
 │
 └── assets/
     └── anatomy/                 # Gray anatomical reference images (7 body regions)
-`
+
 
 ---
 
