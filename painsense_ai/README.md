@@ -154,12 +154,12 @@ pip install -r requirements.txt
 MedGemma is loaded from a **local directory** (not downloaded at runtime).
 Place the model files in a sibling folder called med gemma/ next to painsense_ai/:
 
-`
+```
 Desktop/
 +-- med gemma/            <- root workspace folder
     +-- med gemma/        <- MedGemma weights: config.json, *.safetensors, tokenizer.*
     +-- painsense_ai/     <- this repo
-`
+```
 
 Model: google/medgemma-4b-it loaded at 4-bit NF4 quantisation via itsandbytes.
 The model path is configured in config.py -> MODEL_DIR.
